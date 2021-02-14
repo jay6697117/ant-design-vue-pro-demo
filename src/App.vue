@@ -9,6 +9,15 @@
   </div>
 </template>
 
+<script>
+export default {
+  mounted() {
+    console.log('this :>> ', this);
+    console.log('this.$confirm :>> ', this.$confirm);
+  }
+};
+</script>
+
 <style lang="less">
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;
