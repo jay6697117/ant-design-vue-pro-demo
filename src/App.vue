@@ -1,5 +1,16 @@
 <template>
   <div id="app">
+    <div id="header">
+      <a-button type="primary" @click="showModal">
+        Open Modal
+      </a-button>
+      <a-modal v-model="visible" title="Basic Modal" @ok="handleOk">
+        <p>Some contents...</p>
+        <p>Some contents...</p>
+        <p>Some contents...</p>
+      </a-modal>
+    </div>
+    <hr />
     <div id="nav">
       <router-link to="/">Home</router-link>
       |
@@ -11,9 +22,19 @@
 
 <script>
 export default {
-  mounted() {
-    console.log('this :>> ', this);
-    console.log('this.$confirm :>> ', this.$confirm);
+  data() {
+    return {
+      visible: false
+    };
+  },
+  methods: {
+    showModal() {
+      this.visible = true;
+    },
+    handleOk(e) {
+      console.log(e);
+      this.visible = false;
+    }
   }
 };
 </script>
@@ -25,17 +46,21 @@ export default {
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #2c3e50;
-}
 
-#nav {
-  padding: 30px;
+  #header {
+    background-color: red;
+  }
 
-  a {
-    font-weight: bold;
-    color: #2c3e50;
+  #nav {
+    padding: 30px;
 
-    &.router-link-exact-active {
-      color: #42b983;
+    a {
+      font-weight: bold;
+      color: #2c3e50;
+
+      &.router-link-exact-active {
+        color: #42b983;
+      }
     }
   }
 }
