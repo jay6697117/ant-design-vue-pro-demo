@@ -1,15 +1,13 @@
 const terserPlugin = require('terser-webpack-plugin');
 
 module.exports = {
+  productionSourceMap: false,
   css: {
     loaderOptions: {
       less: {
         javascriptEnabled: true
       }
     }
-  },
-  devServer: {
-    open: true
   },
   configureWebpack: config => {
     config.optimization = {
@@ -26,5 +24,8 @@ module.exports = {
         })
       ]
     };
+  },
+  devServer: {
+    open: true
   }
 };

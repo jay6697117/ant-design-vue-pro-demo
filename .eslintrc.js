@@ -8,8 +8,8 @@ module.exports = {
     parser: 'babel-eslint'
   },
   rules: {
-    'no-console': process.env.NODE_ENV === 'production' ? 'warn' : 'off',
-    'no-debugger': process.env.NODE_ENV === 'production' ? 'warn' : 'off',
-    quotes: [0, 'single', { avoidEscape: true, allowTemplateLiterals: true }]
+    'no-console': 'off',
+    'no-debugger': 'off',
+    quotes: ['off', 'single', { avoidEscape: true, allowTemplateLiterals: true }]
   }
 };
