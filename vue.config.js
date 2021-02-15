@@ -26,6 +26,18 @@ module.exports = {
     };
   },
   devServer: {
-    open: true
+    open: true,
+    host: '0.0.0.0',
+    port: 8080,
+    proxy: {
+      '/': {
+        target: 'http://127.0.0.1:8080/',
+        changeOrigin: true, //是否开启跨域
+        ws: false, //是否支持WebSocket
+        pathRewrite: {
+          '^/': ''
+        }
+      }
+    }
   }
 };
