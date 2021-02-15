@@ -1,7 +1,7 @@
 const terserPlugin = require('terser-webpack-plugin');
 
 module.exports = {
-  productionSourceMap: false,
+  productionSourceMap: false, //去除map文件
   css: {
     loaderOptions: {
       less: {
