@@ -16,6 +16,7 @@
       |
       <router-link to="/about" tag="button">About</router-link>
     </div>
+    <hr />
     <router-view />
   </div>
 </template>
