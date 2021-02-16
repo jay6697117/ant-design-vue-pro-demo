@@ -5,9 +5,9 @@
         Open Modal
       </a-button>
       <a-modal v-model="visible" title="Basic Modal" @ok="handleOk">
-        <p>Some contents...</p>
-        <p>Some contents...</p>
-        <p>Some contents...</p>
+        <p>我是弹窗内容001</p>
+        <p>我是弹窗内容002</p>
+        <p>我是弹窗内容003</p>
       </a-modal>
     </div>
     <hr />
