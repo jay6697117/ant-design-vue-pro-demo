@@ -1,6 +1,6 @@
 <template>
-  <div id="app">
-    <div id="header">
+  <div class="app">
+    <div class="header">
       <a-button type="primary" @click="showModal">
         Open Modal
       </a-button>
@@ -11,13 +11,15 @@
       </a-modal>
     </div>
     <hr />
-    <div id="nav">
+    <div class="nav">
       <router-link to="/" tag="button">Home</router-link>
       |
       <router-link to="/about" tag="button">About</router-link>
+      |
+      <router-link to="/user" tag="button">User</router-link>
     </div>
     <hr />
-    <router-view />
+    <router-view class="app-rv" />
   </div>
 </template>
 
@@ -41,19 +43,21 @@ export default {
 </script>
 
 <style lang="less">
-#app {
+.app {
   font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #2c3e50;
 
-  #header {
-    background-color: red;
+  .header {
+    padding: 30px;
+    background-color: lightgreen;
   }
 
-  #nav {
+  .nav {
     padding: 30px;
+    background-color: skyblue;
 
     a {
       font-weight: bold;
@@ -63,6 +67,11 @@ export default {
         color: #42b983;
       }
     }
+  }
+
+  .app-rv {
+    padding: 30px;
+    background-color: lightgray;
   }
 }
 </style>
