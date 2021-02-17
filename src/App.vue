@@ -17,6 +17,10 @@
       <router-link to="/about" tag="button">About</router-link>
       |
       <router-link to="/user" tag="button">User</router-link>
+      |
+      <router-link to="/user/login" tag="button">Login</router-link>
+      |
+      <router-link to="/user/register" tag="button">Register</router-link>
     </div>
     <hr />
     <router-view class="app-rv" />

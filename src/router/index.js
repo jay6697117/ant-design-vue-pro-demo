@@ -16,8 +16,8 @@ const routes = [
   {
     path: '/user',
     name: 'User',
-    // component: { render: h => h('router-view') },
-    component: () => import('../views/user/User.vue'),
+    component: { render: h => h('router-view') },
+    // component: () => import('../views/user/User.vue'),
     children: [
       {
         path: 'login',
