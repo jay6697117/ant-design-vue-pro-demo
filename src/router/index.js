@@ -16,8 +16,16 @@ const routes = [
   {
     path: '/user',
     name: 'User',
-    component: { render: h => h('router-view') },
-    // component: () => import('../views/user/User.vue'),
+    component: () => import('../layouts/UserLayout.vue'),
+    // component: {
+    //   render: function(h) {
+    //     return h('router-view');
+    //   },
+    //   render: h => {
+    //     return h('router-view');
+    //   },
+    //   render: h => h('router-view')
+    // },
     children: [
       {
         path: 'login',
